@@ -6,25 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>807</width>
+    <height>501</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Gestion des Clients</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>311</width>
-      <height>161</height>
+      <x>70</x>
+      <y>170</y>
+      <width>321</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="title">
-     <string>Ajouter Client</string>
+     <string>Authentification</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
@@ -62,7 +65,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Age</string>
+      <string>CIN</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit">
@@ -96,11 +99,27 @@
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>751</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/248085488_591901992026832_2710901618884620913_n.png</pixmap>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>210</y>
+      <x>380</x>
+      <y>310</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -109,14 +128,17 @@
      <string>Ajouter</string>
     </property>
    </widget>
+   <zorder>label_4</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
-     <height>21</height>
+     <width>807</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
