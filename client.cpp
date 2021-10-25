@@ -8,7 +8,7 @@ Client::Client()
     CIN=0;
 }
 
-Client::Client(string prenom,string nom,string service,string adresse_email,long numCIN,long ID_rdv){
+Client::Client(string prenom,string nom,string service,string adresse_email,long CIN,long ID_rdv){
     this->prenom=prenom;
     this->nom=nom;
     this->service=service;
@@ -21,7 +21,3 @@ Client::Client(string prenom,string nom,string service,string adresse_email,long
     cout<<"Client:"<<nom<<"adresse_email"<<adresse_email<<"num cin"<<CIN<<endl;
 }*/
 
-Etudiant::~Etudiant()
-{
-    //dtor
-}
