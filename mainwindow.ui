@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../Downloads/248085488_591901992026832_2710901618884620913_n.png</pixmap>
+     <pixmap>../../../Downloads/248085488_591901992026832_2710901618884620913_n.png</pixmap>
     </property>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
@@ -57,19 +57,6 @@
       </property>
       <property name="text">
        <string>Ajouter Client</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>111</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Afficher Clients</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_5">
