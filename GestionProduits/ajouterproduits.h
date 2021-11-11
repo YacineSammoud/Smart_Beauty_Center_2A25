@@ -2,7 +2,7 @@
 #define AJOUTERPRODUITS_H
 
 #include <QMainWindow>
-
+#include "produit.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class AjouterProduits; }
 QT_END_NAMESPACE
@@ -16,7 +16,25 @@ public:
     ~AjouterProduits();
 
 
+private slots:
+    void on_VA_clicked();
+
+    void on_QA_clicked();
+
+    void on_UP_clicked();
+
+    void on_lineEdit_recherche_textChanged(const QString &arg1);
+
+    void on_SupP_clicked();
+
+    void on_VA_2_clicked();
+
+    void on_StatButton_clicked();
+
+    void on_pushButton_5_clicked();
+
 private:
     Ui::AjouterProduits *ui;
+    Produit Prod;
 };
 #endif // AJOUTERPRODUITS_H
