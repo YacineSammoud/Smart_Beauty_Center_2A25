@@ -59,6 +59,19 @@
        <string>Ajouter Client</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Afficher Clients</string>
+      </property>
+     </widget>
      <widget class="QPushButton" name="pushButton_5">
       <property name="geometry">
        <rect>
@@ -160,8 +173,8 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>30</y>
+      <x>350</x>
+      <y>10</y>
       <width>311</width>
       <height>161</height>
      </rect>
