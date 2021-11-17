@@ -29,6 +29,26 @@ private slots:
 
     void on_valider_modifier_clicked();
 
+    void on_pushButton_14_clicked();
+
+    void on_pushButton_chercherE_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_trie_nom_clicked();
+
+    void on_pushButton_id_clicked();
+
+    void on_pushButton_prenom_clicked();
+
+    void on_pushButton_pdf_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_stat_clicked();
+
+    void on_pushButton_cam_clicked();
+
 private:
     Ui::MainWindow *ui;
     employes E ;

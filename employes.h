@@ -26,8 +26,12 @@ public:
     QSqlQueryModel* afficher(); //le resultat  ensemble d'information d'une requete query de type sql
     bool supprimer(int);
     bool modifier(int);
-
-
+QSqlQueryModel* recherche(QString );
+QSqlQueryModel* recherche1(QString );
+QSqlQueryModel* recherche2(QString );
+QSqlQueryModel * trier();
+QSqlQueryModel * trier1();
+QSqlQueryModel * trier2();
 
 private:
     int id,nbr_heure,nbr_point;
