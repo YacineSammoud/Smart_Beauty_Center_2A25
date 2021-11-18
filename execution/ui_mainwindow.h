@@ -33,7 +33,6 @@ public:
     QWidget *centralWidget;
     QTabWidget *tabWidget;
     QWidget *tab;
-    QPushButton *pushButton_13;
     QPushButton *pt_ajouter;
     QLineEdit *nbr_heure;
     QLineEdit *nom;
@@ -43,7 +42,6 @@ public:
     QLineEdit *prenom;
     QLabel *label_9;
     QLabel *label;
-    QLineEdit *le_chercher;
     QLabel *label_11;
     QLabel *label_7;
     QLabel *label_8;
@@ -54,14 +52,15 @@ public:
     QPushButton *push_supprimer;
     QLineEdit *id_supp;
     QLabel *label_13;
-    QLabel *label_14;
     QPushButton *pushButton_stat;
-    QPushButton *pushButton_pdf;
     QLabel *label_2;
     QPushButton *trie_nom;
     QPushButton *pushButton_id;
     QPushButton *pushButton_prenom;
     QPushButton *pushButton_cam;
+    QLabel *label_3;
+    QLineEdit *lineEdit;
+    QPushButton *pushButton_pdf;
     QWidget *tab_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -79,9 +78,6 @@ public:
         tabWidget->setGeometry(QRect(0, 0, 811, 481));
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
-        pushButton_13 = new QPushButton(tab);
-        pushButton_13->setObjectName(QStringLiteral("pushButton_13"));
-        pushButton_13->setGeometry(QRect(100, 110, 101, 28));
         pt_ajouter = new QPushButton(tab);
         pt_ajouter->setObjectName(QStringLiteral("pt_ajouter"));
         pt_ajouter->setGeometry(QRect(470, 260, 61, 28));
@@ -109,9 +105,6 @@ public:
         label = new QLabel(tab);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(390, 200, 61, 20));
-        le_chercher = new QLineEdit(tab);
-        le_chercher->setObjectName(QStringLiteral("le_chercher"));
-        le_chercher->setGeometry(QRect(90, 230, 113, 21));
         label_11 = new QLabel(tab);
         label_11->setObjectName(QStringLiteral("label_11"));
         label_11->setGeometry(QRect(390, 170, 51, 20));
@@ -142,15 +135,9 @@ public:
         label_13 = new QLabel(tab);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(620, 320, 161, 31));
-        label_14 = new QLabel(tab);
-        label_14->setObjectName(QStringLiteral("label_14"));
-        label_14->setGeometry(QRect(610, 360, 47, 14));
         pushButton_stat = new QPushButton(tab);
         pushButton_stat->setObjectName(QStringLiteral("pushButton_stat"));
         pushButton_stat->setGeometry(QRect(350, 370, 101, 23));
-        pushButton_pdf = new QPushButton(tab);
-        pushButton_pdf->setObjectName(QStringLiteral("pushButton_pdf"));
-        pushButton_pdf->setGeometry(QRect(350, 340, 101, 23));
         label_2 = new QLabel(tab);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(0, -20, 811, 501));
@@ -167,9 +154,17 @@ public:
         pushButton_cam = new QPushButton(tab);
         pushButton_cam->setObjectName(QStringLiteral("pushButton_cam"));
         pushButton_cam->setGeometry(QRect(350, 310, 101, 23));
+        label_3 = new QLabel(tab);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(120, 120, 47, 14));
+        lineEdit = new QLineEdit(tab);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(600, 260, 113, 20));
+        pushButton_pdf = new QPushButton(tab);
+        pushButton_pdf->setObjectName(QStringLiteral("pushButton_pdf"));
+        pushButton_pdf->setGeometry(QRect(360, 340, 75, 23));
         tabWidget->addTab(tab, QString());
         label_2->raise();
-        pushButton_13->raise();
         pt_ajouter->raise();
         nbr_heure->raise();
         nom->raise();
@@ -179,7 +174,6 @@ public:
         prenom->raise();
         label_9->raise();
         label->raise();
-        le_chercher->raise();
         label_11->raise();
         label_7->raise();
         label_8->raise();
@@ -190,13 +184,14 @@ public:
         push_supprimer->raise();
         id_supp->raise();
         label_13->raise();
-        label_14->raise();
         pushButton_stat->raise();
-        pushButton_pdf->raise();
         trie_nom->raise();
         pushButton_id->raise();
         pushButton_prenom->raise();
         pushButton_cam->raise();
+        label_3->raise();
+        lineEdit->raise();
+        pushButton_pdf->raise();
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
         tabWidget->addTab(tab_2, QString());
@@ -223,7 +218,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Gestion des Clients", Q_NULLPTR));
-        pushButton_13->setText(QApplication::translate("MainWindow", "trier", Q_NULLPTR));
         pt_ajouter->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
         bouton_modifier->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         label_9->setText(QApplication::translate("MainWindow", "prenom", Q_NULLPTR));
@@ -235,14 +229,14 @@ public:
         label_10->setText(QApplication::translate("MainWindow", "service", Q_NULLPTR));
         push_supprimer->setText(QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
         label_13->setText(QApplication::translate("MainWindow", "pour supprimer un employe", Q_NULLPTR));
-        label_14->setText(QApplication::translate("MainWindow", "id", Q_NULLPTR));
         pushButton_stat->setText(QApplication::translate("MainWindow", "statistique", Q_NULLPTR));
-        pushButton_pdf->setText(QApplication::translate("MainWindow", "liste des employes ", Q_NULLPTR));
         label_2->setText(QString());
         trie_nom->setText(QApplication::translate("MainWindow", "nom", Q_NULLPTR));
         pushButton_id->setText(QApplication::translate("MainWindow", "id", Q_NULLPTR));
         pushButton_prenom->setText(QApplication::translate("MainWindow", "prenom", Q_NULLPTR));
         pushButton_cam->setText(QApplication::translate("MainWindow", "camera", Q_NULLPTR));
+        label_3->setText(QApplication::translate("MainWindow", "trier ", Q_NULLPTR));
+        pushButton_pdf->setText(QApplication::translate("MainWindow", "pdf ", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Tab 1", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Tab 2", Q_NULLPTR));
     } // retranslateUi

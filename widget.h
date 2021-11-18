@@ -26,6 +26,9 @@ public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
 
+private slots:
+    void on_option_pushButton_clicked();
+
 private:
     Ui::Widget *ui;
     QCamera *mCamera ;

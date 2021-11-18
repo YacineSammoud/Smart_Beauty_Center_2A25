@@ -26,6 +26,8 @@ public:
     QSqlQueryModel* afficher(); //le resultat  ensemble d'information d'une requete query de type sql
     bool supprimer(int);
     bool modifier(int);
+    QSqlQueryModel* recherche8(QString );
+     QSqlQueryModel* recherche7(QString a);
 QSqlQueryModel* recherche(QString );
 QSqlQueryModel* recherche1(QString );
 QSqlQueryModel* recherche2(QString );

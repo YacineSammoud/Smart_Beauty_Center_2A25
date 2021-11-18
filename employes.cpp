@@ -92,8 +92,11 @@ bool employes::modifier(int id)
 
 
 
+
  return query.exec();
 }
+
+
 QSqlQueryModel * employes:: trier(){
     QSqlQueryModel *model=new QSqlQueryModel();
     model->setQuery("select * from employess order by id desc");
@@ -135,43 +138,21 @@ model->setHeaderData(5, Qt::Horizontal,QObject::tr("nbr_point"));
 
 return  model ;
 }
-QSqlQueryModel *employes::recherche(QString nom ){
-    QSqlQueryModel *model=new QSqlQueryModel();
-    model->setQuery("select * from employess WHERE(nom='"+nom+"')");
 
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
-    model->setHeaderData(1, Qt::Horizontal,QObject::tr("nom"));
-model->setHeaderData(2, Qt::Horizontal,QObject::tr("prenom"));
-model->setHeaderData(3, Qt::Horizontal,QObject::tr("service"));
-model->setHeaderData(4, Qt::Horizontal,QObject::tr("nbr_heure"));
-model->setHeaderData(5, Qt::Horizontal,QObject::tr("nbr_point"));
-return  model ;
 
-}
-QSqlQueryModel *employes::recherche1(QString prenom  ){
-    QSqlQueryModel *model=new QSqlQueryModel();
-    model->setQuery("select * from employess WHERE(prenom='"+prenom+"')");
 
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
-    model->setHeaderData(1, Qt::Horizontal,QObject::tr("nom"));
-model->setHeaderData(2, Qt::Horizontal,QObject::tr("prenom"));
-model->setHeaderData(3, Qt::Horizontal,QObject::tr("service"));
-model->setHeaderData(4, Qt::Horizontal,QObject::tr("nbr_heure"));
-model->setHeaderData(5, Qt::Horizontal,QObject::tr("nbr_point"));
-return  model ;
 
-}
 
-QSqlQueryModel *employes::recherche2(QString service ){
-    QSqlQueryModel *model=new QSqlQueryModel();
-    model->setQuery("select * from employess WHERE(service='"+service+"')");
+    QSqlQueryModel * employes::recherche7(QString a)
+    {
+        QSqlQueryModel *model=new QSqlQueryModel();
+        model->setQuery("SELECT * FROM employess WHERE (id LIKE '%"+a+"%' OR nom LIKE '%"+a+"%' OR prenom LIKE '%"+a+"%' OR service LIKE '%"+a+"%' OR nbr_heure LIKE '%"+a+"%' OR nbr_point LIKE '%"+a+"%' ) ");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+        model->setHeaderData(1, Qt::Horizontal,QObject::tr("nom"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("prenom"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("service"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("nbr_heure"));
+    model->setHeaderData(5, Qt::Horizontal,QObject::tr("nbr_point"));
 
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
-    model->setHeaderData(1, Qt::Horizontal,QObject::tr("nom"));
-model->setHeaderData(2, Qt::Horizontal,QObject::tr("prenom"));
-model->setHeaderData(3, Qt::Horizontal,QObject::tr("service"));
-model->setHeaderData(4, Qt::Horizontal,QObject::tr("nbr_heure"));
-model->setHeaderData(5, Qt::Horizontal,QObject::tr("nbr_point"));
-return  model ;
-
-}
+        return model;
+    }

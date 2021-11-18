@@ -13,15 +13,15 @@
 #include<QFileDialog>
 
 
-/*Widget::Widget(QWidget *parent)
+Widget::Widget(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::Widget)   // n3ayet classe
+    , ui(new Ui::Widget)
 {
     ui->setupUi(this);
 
-    mCamera = new QCamera(this); //declari cam
-    mCameraViewfinder = new QCameraViewfinder(this); // tlawej pos view
-    mCameraImageCapture = new QCameraImageCapture(mCamera, this); // variable caapture
+    mCamera = new QCamera(this); //variable cam
+    mCameraViewfinder = new QCameraViewfinder(this); // variable mta3 facade
+    mCameraImageCapture = new QCameraImageCapture(mCamera, this); //variable capture
     mLayout = new QVBoxLayout ;
 
     mOptionMenu = new QMenu("options",this);
@@ -29,33 +29,35 @@
     mEteindreAction = new QAction("ETeindre",this);
     mCaturerAction = new QAction ("Capturer",this);
 
-    mOptionMenu->addActions({mAllumerAction , mEteindreAction , mCaturerAction}); // afficher bouton
+    mOptionMenu->addActions({mAllumerAction , mEteindreAction , mCaturerAction});
 
-    ui->option_pushButton->setMenu(mOptionMenu); //activer
+
+    ui->option_pushButton->setMenu(mOptionMenu); // activi bouton
     mCamera->setViewfinder(mCameraViewfinder);
 
 
     mLayout->addWidget(mCameraViewfinder);
     mLayout->setMargin(0);
 
-    ui->scrollArea->setLayout(mLayout); // afficher elli fih taswira (mlayout)
+    ui->scrollArea->setLayout(mLayout); // affichage mta3 cam
 
-    connect(mAllumerAction, &QAction::triggered,[&](){   mCamera->start();}); //connecter qt +cam w t7ell cam
+    connect(mAllumerAction, &QAction::triggered,[&](){   mCamera->start();}); // connecti cam bel pc w activiha
 
-    connect(mEteindreAction,&QAction::triggered,[&]() //
+    connect(mEteindreAction,&QAction::triggered,[&]() //tsaker cam
     {
         mCamera->stop();
     });
 
-    connect(mCaturerAction,&QAction::triggered,[&]() // connecteur bech ta3mel capture
+    connect(mCaturerAction,&QAction::triggered,[&]()
     {
-     auto filename  = QFileDialog::getSaveFileName(this,"capturer", "/" , "Image (jpg; jpeg)"); // variable ye5i cap
+     auto filename  = QFileDialog::getSaveFileName(this,"capturer", "/" , "Image (*jpg;* jpeg)");
+
         mCameraImageCapture->setCaptureDestination(QCameraImageCapture::CaptureToFile);
         QImageEncoderSettings imageEncoderSettings ;
-        imageEncoderSettings.setCodec("image/jpeg"); //ye5o taswira
-        imageEncoderSettings.setResolution(1600,1200); //resolution
-        mCameraImageCapture->setEncodingSettings(imageEncoderSettings);
-       mCamera->setCaptureMode(QCamera::CaptureStillImage); //cam tet7all
+        imageEncoderSettings.setCodec("image/jpeg");
+        imageEncoderSettings.setResolution(1600,1200);
+        mCameraImageCapture->setEncodingSettings(imageEncoderSettings); // te5o capture
+       mCamera->setCaptureMode(QCamera::CaptureStillImage);
        mCamera->start();
        mCamera->searchAndLock();
        mCameraImageCapture->capture(filename);
@@ -66,8 +68,12 @@
 
 }
 
+
 Widget::~Widget()
 {
     delete ui;
 }
-*/
+
+
+
+

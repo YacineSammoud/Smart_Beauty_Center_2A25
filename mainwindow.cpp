@@ -169,22 +169,6 @@ void MainWindow::on_pushButton_prenom_clicked()
           ui->tab_employes->setModel(E.trier2());
 }
 
-void MainWindow::on_pushButton_chercherE_clicked()
-{
-    /*chercher*/
-       employes E;
-       QString rech=ui->id_supp->text();
-
-       if (rech=="")
-        ui->tab_employes->setModel(E.afficher());
-       else
-       ui->tab_employes->setModel(E.recherche(rech ));
-       ui->tab_employes->setModel(E.recherche1(rech ));
-       ui->tab_employes->setModel(E.recherche2(rech ));
-
-}
-
-
 
 void MainWindow::on_pushButton_pdf_clicked()
 {
@@ -207,7 +191,7 @@ void MainWindow::on_pushButton_pdf_clicked()
                   painter.drawText(2200,3300,"prenom");
                   painter.drawText(3400,3300,"service");
                   painter.drawText(4400,3300,"nbr_heure");
-
+ painter.drawText(4400,3300,"nbr_point");
                   painter.drawRect(100,3000,9400,9000);
 
                   QSqlQuery query;
@@ -287,9 +271,18 @@ void MainWindow::on_pushButton_stat_clicked()
 
 }
 
-/*void MainWindow::on_pushButton_cam_clicked()
+void MainWindow::on_pushButton_cam_clicked()
 {
     Widget w ;
        w.setModal(true);
        w.exec();
-}*/
+
+}
+
+
+
+
+void MainWindow::on_lineEdit_textEdited(const QString &arg1)
+{
+    ui->tab_employes->setModel(E.recherche7(arg1));
+}

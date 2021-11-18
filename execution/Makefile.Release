@@ -186,8 +186,9 @@ release/moc_mainwindow.cpp: ../employes.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqldatabase.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQuery \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
+		../widget.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
@@ -227,6 +228,8 @@ release/moc_mainwindow.cpp: ../employes.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
 		../mainwindow.h \
@@ -508,8 +511,9 @@ release/main.o: ../main.cpp ../mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqldatabase.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQuery \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
+		../widget.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
@@ -549,6 +553,8 @@ release/main.o: ../main.cpp ../mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QApplication \
@@ -560,7 +566,6 @@ release/main.o: ../main.cpp ../mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qinputmethod.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMessageBox \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmessagebox.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
 		../connection.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlDatabase \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlError \
@@ -640,8 +645,9 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqldatabase.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQuery \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
+		../widget.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
@@ -681,6 +687,8 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QIntValidator \
@@ -695,7 +703,6 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qinputmethod.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMessageBox \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmessagebox.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
 		ui_mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QObject \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QPdfWriter \
@@ -1128,9 +1135,7 @@ release/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCharts/qvpiemodelmapper.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCharts/qvxymodelmapper.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCharts/qxylegendmarker.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCharts/qtchartsversion.h \
-		../widget.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QDialog
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCharts/qtchartsversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\mainwindow.cpp
 
 release/connection.o: ../connection.cpp ../connection.h \

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[17];
-    char stringdata0[392];
+    QByteArrayData data[14];
+    char stringdata0[291];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,34 +34,29 @@ static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
 QT_MOC_LITERAL(1, 11, 21), // "on_pt_ajouter_clicked"
 QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 20), // "on_push_load_clicked"
-QT_MOC_LITERAL(4, 55, 25), // "on_push_supprimer_clicked"
-QT_MOC_LITERAL(5, 81, 26), // "on_bouton_modifier_clicked"
-QT_MOC_LITERAL(6, 108, 27), // "on_valider_modifier_clicked"
-QT_MOC_LITERAL(7, 136, 24), // "on_pushButton_14_clicked"
-QT_MOC_LITERAL(8, 161, 31), // "on_pushButton_chercherE_clicked"
-QT_MOC_LITERAL(9, 193, 23), // "on_pushButton_3_clicked"
-QT_MOC_LITERAL(10, 217, 19), // "on_trie_nom_clicked"
-QT_MOC_LITERAL(11, 237, 24), // "on_pushButton_id_clicked"
-QT_MOC_LITERAL(12, 262, 28), // "on_pushButton_prenom_clicked"
-QT_MOC_LITERAL(13, 291, 25), // "on_pushButton_pdf_clicked"
-QT_MOC_LITERAL(14, 317, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(15, 339, 26), // "on_pushButton_stat_clicked"
-QT_MOC_LITERAL(16, 366, 25) // "on_pushButton_cam_clicked"
+QT_MOC_LITERAL(3, 34, 25), // "on_push_supprimer_clicked"
+QT_MOC_LITERAL(4, 60, 26), // "on_bouton_modifier_clicked"
+QT_MOC_LITERAL(5, 87, 19), // "on_trie_nom_clicked"
+QT_MOC_LITERAL(6, 107, 24), // "on_pushButton_id_clicked"
+QT_MOC_LITERAL(7, 132, 28), // "on_pushButton_prenom_clicked"
+QT_MOC_LITERAL(8, 161, 25), // "on_pushButton_pdf_clicked"
+QT_MOC_LITERAL(9, 187, 26), // "on_pushButton_stat_clicked"
+QT_MOC_LITERAL(10, 214, 25), // "on_pushButton_cam_clicked"
+QT_MOC_LITERAL(11, 240, 22), // "on_id_supp_textChanged"
+QT_MOC_LITERAL(12, 263, 22), // "on_lineEdit_textEdited"
+QT_MOC_LITERAL(13, 286, 4) // "arg1"
 
     },
     "MainWindow\0on_pt_ajouter_clicked\0\0"
-    "on_push_load_clicked\0on_push_supprimer_clicked\0"
+    "on_push_supprimer_clicked\0"
     "on_bouton_modifier_clicked\0"
-    "on_valider_modifier_clicked\0"
-    "on_pushButton_14_clicked\0"
-    "on_pushButton_chercherE_clicked\0"
-    "on_pushButton_3_clicked\0on_trie_nom_clicked\0"
-    "on_pushButton_id_clicked\0"
+    "on_trie_nom_clicked\0on_pushButton_id_clicked\0"
     "on_pushButton_prenom_clicked\0"
     "on_pushButton_pdf_clicked\0"
-    "on_pushButton_clicked\0on_pushButton_stat_clicked\0"
-    "on_pushButton_cam_clicked"
+    "on_pushButton_stat_clicked\0"
+    "on_pushButton_cam_clicked\0"
+    "on_id_supp_textChanged\0on_lineEdit_textEdited\0"
+    "arg1"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +66,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,21 +74,17 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   89,    2, 0x08 /* Private */,
-       3,    0,   90,    2, 0x08 /* Private */,
-       4,    0,   91,    2, 0x08 /* Private */,
-       5,    0,   92,    2, 0x08 /* Private */,
-       6,    0,   93,    2, 0x08 /* Private */,
-       7,    0,   94,    2, 0x08 /* Private */,
-       8,    0,   95,    2, 0x08 /* Private */,
-       9,    0,   96,    2, 0x08 /* Private */,
-      10,    0,   97,    2, 0x08 /* Private */,
-      11,    0,   98,    2, 0x08 /* Private */,
-      12,    0,   99,    2, 0x08 /* Private */,
-      13,    0,  100,    2, 0x08 /* Private */,
-      14,    0,  101,    2, 0x08 /* Private */,
-      15,    0,  102,    2, 0x08 /* Private */,
-      16,    0,  103,    2, 0x08 /* Private */,
+       1,    0,   69,    2, 0x08 /* Private */,
+       3,    0,   70,    2, 0x08 /* Private */,
+       4,    0,   71,    2, 0x08 /* Private */,
+       5,    0,   72,    2, 0x08 /* Private */,
+       6,    0,   73,    2, 0x08 /* Private */,
+       7,    0,   74,    2, 0x08 /* Private */,
+       8,    0,   75,    2, 0x08 /* Private */,
+       9,    0,   76,    2, 0x08 /* Private */,
+      10,    0,   77,    2, 0x08 /* Private */,
+      11,    0,   78,    2, 0x08 /* Private */,
+      12,    1,   79,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -106,11 +97,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   13,
 
        0        // eod
 };
@@ -122,24 +109,19 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pt_ajouter_clicked(); break;
-        //case 1: _t->on_push_load_clicked(); break;
-        case 2: _t->on_push_supprimer_clicked(); break;
-        case 3: _t->on_bouton_modifier_clicked(); break;
-        //case 4: _t->on_valider_modifier_clicked(); break;
-        //case 5: _t->on_pushButton_14_clicked(); break;
-        case 6: _t->on_pushButton_chercherE_clicked(); break;
-        //case 7: _t->on_pushButton_3_clicked(); break;
-        case 8: _t->on_trie_nom_clicked(); break;
-        case 9: _t->on_pushButton_id_clicked(); break;
-        case 10: _t->on_pushButton_prenom_clicked(); break;
-        case 11: _t->on_pushButton_pdf_clicked(); break;
-        //case 12: _t->on_pushButton_clicked(); break;
-        case 13: _t->on_pushButton_stat_clicked(); break;
-        //case 14: _t->on_pushButton_cam_clicked(); break;
+        case 1: _t->on_push_supprimer_clicked(); break;
+        case 2: _t->on_bouton_modifier_clicked(); break;
+        case 3: _t->on_trie_nom_clicked(); break;
+        case 4: _t->on_pushButton_id_clicked(); break;
+        case 5: _t->on_pushButton_prenom_clicked(); break;
+        case 6: _t->on_pushButton_pdf_clicked(); break;
+        case 7: _t->on_pushButton_stat_clicked(); break;
+        case 8: _t->on_pushButton_cam_clicked(); break;
+        //case 9: _t->on_id_supp_textChanged(); break;
+        case 10: _t->on_lineEdit_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -167,13 +149,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 15;
+        _id -= 11;
     }
     return _id;
 }

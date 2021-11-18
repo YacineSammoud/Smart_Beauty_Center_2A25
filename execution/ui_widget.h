@@ -13,53 +13,60 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Dialog
+class Ui_Widget
 {
 public:
+    QVBoxLayout *verticalLayout;
+    QPushButton *option_pushButton;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QPushButton *option_pushButton;
 
-    void setupUi(QDialog *Dialog)
+    void setupUi(QWidget *Widget)
     {
-        if (Dialog->objectName().isEmpty())
-            Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(400, 300);
-        scrollArea = new QScrollArea(Dialog);
+        if (Widget->objectName().isEmpty())
+            Widget->setObjectName(QStringLiteral("Widget"));
+        Widget->resize(793, 576);
+        verticalLayout = new QVBoxLayout(Widget);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        option_pushButton = new QPushButton(Widget);
+        option_pushButton->setObjectName(QStringLiteral("option_pushButton"));
+
+        verticalLayout->addWidget(option_pushButton);
+
+        scrollArea = new QScrollArea(Widget);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setGeometry(QRect(130, 110, 120, 80));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 118, 78));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 773, 522));
         scrollArea->setWidget(scrollAreaWidgetContents);
-        option_pushButton = new QPushButton(Dialog);
-        option_pushButton->setObjectName(QStringLiteral("option_pushButton"));
-        option_pushButton->setGeometry(QRect(140, 80, 75, 23));
 
-        retranslateUi(Dialog);
+        verticalLayout->addWidget(scrollArea);
 
-        QMetaObject::connectSlotsByName(Dialog);
+
+        retranslateUi(Widget);
+
+        QMetaObject::connectSlotsByName(Widget);
     } // setupUi
 
-    void retranslateUi(QDialog *Dialog)
+    void retranslateUi(QWidget *Widget)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", Q_NULLPTR));
-        option_pushButton->setText(QApplication::translate("Dialog", "option ", Q_NULLPTR));
+        Widget->setWindowTitle(QApplication::translate("Widget", "Widget", Q_NULLPTR));
+        option_pushButton->setText(QApplication::translate("Widget", "option", Q_NULLPTR));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Dialog: public Ui_Dialog {};
+    class Widget: public Ui_Widget {};
 } // namespace Ui
 
 QT_END_NAMESPACE
