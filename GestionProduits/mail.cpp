@@ -39,13 +39,13 @@ void  mail::browse()
 }
 void   mail::sendMail()
 {
-    Smtp* smtp = new Smtp("mayhabbachi@gmail.com",ui->mail_pass->text(), "smtp.gmail.com",465);
+    Smtp* smtp = new Smtp("chihebab94@gmail.com",ui->mail_pass->text(), "smtp.gmail.com",465);
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
-        smtp->sendMail("mayhabbachi@gmail.com", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+        smtp->sendMail("chihebab94@gmail.com", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
     else
-        smtp->sendMail("mayhabbachi@gmail.com", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+        smtp->sendMail("chihebab94@gmail.com", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
 }
 
 void   mail::mailSent(QString status)
