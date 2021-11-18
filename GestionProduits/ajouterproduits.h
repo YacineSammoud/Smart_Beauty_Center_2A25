@@ -33,6 +33,14 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void on_comboBox_3_currentIndexChanged(const QString &arg1);
+
+    void on_Export_clicked();
+
+
+
+    void on_Email_clicked();
+
 private:
     Ui::AjouterProduits *ui;
     Produit Prod;
