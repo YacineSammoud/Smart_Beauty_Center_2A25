@@ -3,6 +3,10 @@
 #include <QDebug>
 #include <QObject>
 #include <QBuffer>
+#include<QFile>
+#include<QFileDialog>
+#include<QCoreApplication>
+
 Produit::Produit() //Constructeur par défaut
 {
 Code_Barre=0 ;
@@ -46,14 +50,15 @@ void Produit::setEmployes(QString ID_E){this->ID_E=ID_E;}
 void Produit::setFournisseurs(QString ID_F){this->ID_F=ID_F;}
 
 
-bool Produit::ajouterProduits()
+bool Produit::ajouterProduits(int Code_Barre ,int Stockage,QString Nom,QString Categorie,QString Image,double Prix,QString ID_E,QString ID_F)
 {
 
-
+verifCB(Code_Barre);
     QSqlQuery query;
     QString res= QString::number(Code_Barre);
     QString res1= QString::number(Stockage);
     QString res2= QString::number(Prix);
+
 
 
     query.prepare("INSERT INTO PRODUIT(CODE_BARRE,STOCKAGE,NOM,CATEGORIE,IMAGE,PRIX,ID_E,ID_F)"
@@ -90,11 +95,11 @@ QSqlQueryModel* Produit::afficherProduits()
 }
 
 
-QSqlQueryModel *Produit::rechercherProduits(int Code_Barre )
+QSqlQueryModel *Produit::rechercherProduits(int Code_Barre , QString Nom)
 {
     QString res= QString::number(Code_Barre);
 QSqlQueryModel * model= new QSqlQueryModel();
-model->setQuery("select * from produit where (Code_Barre LIKE '"+res+"%'  ) ");
+model->setQuery("select * from produit where (Code_Barre LIKE '"+res+"%'or Nom LIKE '"+Nom+"%' ) ");
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("Code à barre "));
 model->setHeaderData(2, Qt::Horizontal, QObject::tr("Nom"));
 model->setHeaderData(3, Qt::Horizontal, QObject::tr("Stockage"));
@@ -109,6 +114,7 @@ model->setHeaderData(6, Qt::Horizontal, QObject::tr("Fournisseurs"));
 
 bool Produit::supprimerProduits(int Code_Barre)
 {
+CBExist(Code_Barre);
 QSqlQuery query;
 QString res= QString::number(Code_Barre);
 query.prepare("Delete from produit where Code_Barre = :Code_Barre ");
@@ -194,4 +200,88 @@ void Produit::stat()
     chartView->resize(1000, 500);
     chartView->show();
 }
+
+void Produit::verifCB(int CB)
+{
+    if( CB > 99999999 )
+        throw QString("Code à barre est Supérieure a 8 Chiffres");
+    else if ( CB <= 9999999 )
+        throw QString("Code à barre est inférieure a 8 chiffres");
+
+}
+
+QSqlQueryModel* Produit::triParNom()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+        model->setQuery("select * from produit ORDER BY Nom ASC");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Code à barre "));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Nom"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Stockage"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("Catégorie"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("Image"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Prix"));
+        model->setHeaderData(7, Qt::Horizontal, QObject::tr("Employes"));
+        model->setHeaderData(6, Qt::Horizontal, QObject::tr("Fournisseurs"));
+
+
+    return model;
+}
+
+QSqlQueryModel* Produit::triParPrix()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+        model->setQuery("select * from produit ORDER BY Prix ASC");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Code à barre "));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Nom"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Stockage"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("Catégorie"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("Image"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Prix"));
+        model->setHeaderData(7, Qt::Horizontal, QObject::tr("Employes"));
+        model->setHeaderData(6, Qt::Horizontal, QObject::tr("Fournisseurs"));
+
+
+    return model;
+}
+
+QSqlQueryModel* Produit::triParId()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+    model->setQuery("select * from produit ORDER BY Code_Barre ASC");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Code à barre "));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Nom"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Stockage"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("Catégorie"));
+        model->setHeaderData(5, Qt::Horizontal, QObject::tr("Image"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Prix"));
+        model->setHeaderData(7, Qt::Horizontal, QObject::tr("Employes"));
+        model->setHeaderData(6, Qt::Horizontal, QObject::tr("Fournisseurs"));
+
+
+    return model;
+}
+void Produit::CBExist(int Code_Barre)
+{
+    QSqlQuery query ;
+    query.prepare("SELECT * from produit where Code_Barre = :Code_Barre");
+    query.bindValue(":Code_Barre", Code_Barre);
+    query.exec();
+
+    int i = 0 ;
+    while (query.next()) {
+        i++ ;
+    }
+
+    if( i == 0 )
+    {
+        throw QString("Le Produit Demandé N'existe Pas");
+    }
+
+
+
+}
+
 

@@ -40,12 +40,19 @@ public:
     void setPrix(double);
     void setEmployes(QString);
     void setFournisseurs(QString);
-    bool ajouterProduits();
+    bool ajouterProduits(int CB ,int Stockage,QString Nom,QString Categorie,QString Image,double Prix,QString ID_E,QString ID_F);
     QSqlQueryModel* afficherProduits();
-    QSqlQueryModel *rechercherProduits(int);
+    QSqlQueryModel *rechercherProduits(int Code_barre, QString Nom );
     bool supprimerProduits(int);
     bool modifierProduits(int);
     void stat();
+    void verifCB(int Code_barre);
+    void CBExist(int Code_barre);
+    QSqlQueryModel* triParNom();
+    QSqlQueryModel* triParPrix();
+    QSqlQueryModel* triParId();
+
+
 private:
     int Code_Barre ,Stockage  ;
     QString Nom , Categorie ,Image,ID_E,ID_F;
