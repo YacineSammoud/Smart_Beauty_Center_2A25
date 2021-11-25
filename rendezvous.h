@@ -7,27 +7,40 @@
 
 class Rendezvous
 {
-    QString service , date , heure_d ;
-    int id;
 
 public:
-    Rendezvous(){};
+    Rendezvous();
     Rendezvous(int, QString , QString , QString );
 
-    QString getservice(){return service;}
-    QString getdate(){return date;}
-    QString getheure_d(){return heure_d;}
-    int getid(){return id;}
+    QString getservice();
+    QString getdate();
+    QString getheure_d();
+    int getid();
 
-    void setservice(QString s){service=s;}
-    void setdate(QString d){date=d;}
-    void setheure_d(QString hd){heure_d=hd;}
-    void setid(int id){this->id=id;}
+    void setservice(QString );
+    void setdate(QString );
+    void setheure_d(QString );
+    void setid(int );
 
     bool ajouter();
     QSqlQueryModel * afficher();
     bool supprimer(int);
     bool modifier();
+
+    QSqlQueryModel * chercherservice(const QString &);
+    QSqlQueryModel * chercherdate(const QString &);
+    QSqlQueryModel * chercherid(const QString &);
+
+    QSqlQueryModel *trier_service();
+    QSqlQueryModel *trier_heure_d();
+    QSqlQueryModel *trier_id();
+
+    QSqlQueryModel * Recherche(QString);
+
+
+private:
+    QString service , dates , heure_d ;
+    int id;
 
 
 };
