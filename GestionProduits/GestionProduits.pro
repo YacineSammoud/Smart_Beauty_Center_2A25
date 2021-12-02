@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
     connection.cpp \
     mail.cpp \
     main.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 
 HEADERS += \
     ajouterproduits.h \
+    arduino.h \
     connection.h \
     mail.h \
     produit.h \
@@ -33,6 +35,7 @@ HEADERS += \
 
 FORMS += \
     ajouterproduits.ui \
+    dialog.ui \
     mail.ui
 
 # Default rules for deployment.

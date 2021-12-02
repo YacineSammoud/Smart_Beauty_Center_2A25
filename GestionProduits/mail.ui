@@ -26,20 +26,36 @@
     <enum>QLineEdit::Password</enum>
    </property>
    <property name="placeholderText">
-    <string>your mail password</string>
+    <string>Your E-mail password</string>
    </property>
   </widget>
   <widget class="QPushButton" name="sendBtn">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>260</y>
+     <y>250</y>
      <width>481</width>
      <height>23</height>
     </rect>
    </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Send</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../send.png</normaloff>../send.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="browseBtn">
@@ -51,8 +67,15 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
    <property name="text">
     <string>Browse ...</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../browse.png</normaloff>../browse.png</iconset>
    </property>
   </widget>
   <widget class="QLineEdit" name="rcpt">
@@ -65,20 +88,20 @@
     </rect>
    </property>
    <property name="placeholderText">
-    <string>recipient</string>
+    <string>Receiver</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="file">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>74</y>
+     <y>70</y>
      <width>401</width>
      <height>23</height>
     </rect>
    </property>
    <property name="placeholderText">
-    <string>attachement here</string>
+    <string>Attachement here</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="subject">
@@ -91,20 +114,20 @@
     </rect>
    </property>
    <property name="placeholderText">
-    <string>subject</string>
+    <string>Subject</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="msg">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>110</y>
+     <y>100</y>
      <width>481</width>
      <height>141</height>
     </rect>
    </property>
    <property name="placeholderText">
-    <string>type your message here ...</string>
+    <string>Type your message here ....</string>
    </property>
   </widget>
  </widget>

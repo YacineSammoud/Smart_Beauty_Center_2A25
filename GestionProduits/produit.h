@@ -42,7 +42,7 @@ public:
     void setFournisseurs(QString);
     bool ajouterProduits(int CB ,int Stockage,QString Nom,QString Categorie,QString Image,double Prix,QString ID_E,QString ID_F);
     QSqlQueryModel* afficherProduits();
-    QSqlQueryModel *rechercherProduits(int Code_barre, QString Nom );
+    QSqlQueryModel *rechercherProduits(int Code_barre, QString Nom);
     bool supprimerProduits(int);
     bool modifierProduits(int);
     void stat();

@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -9,6 +10,7 @@ int main(int argc, char *argv[])
     connection c;
     bool conx=c.createconnect();
     AjouterProduits w;
+
 
     if(conx)
     {

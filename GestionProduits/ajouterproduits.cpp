@@ -17,6 +17,18 @@ AjouterProduits::AjouterProduits(QWidget *parent)
     ui->setupUi(this);
     ui->tabaffiche->setModel(Prod.afficherProduits());
 
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+        switch(ret){
+        case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+            break;
+        case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+           break;
+        case(-1):qDebug() << "arduino is not available";
+        }
+         QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+         //le slot update_label suite à la reception du signal readyRead (reception des données).
+
+
 }
 
 
@@ -92,6 +104,7 @@ void AjouterProduits::on_lineEdit_recherche_textChanged(const QString &arg1)
     Produit P;
     int id = ui->lineEdit_recherche->text().toInt();
     QString N = ui->lineEdit_recherche->text();
+
 
     ui->tabaffiche->setModel(P.rechercherProduits(id,N));
 
@@ -227,7 +240,7 @@ void AjouterProduits::on_Export_clicked()
                             <<  QString("<title>%1</title>\n").arg("PRODUITS")
                             <<  "</head>\n"
                             "<body bgcolor=#CFC4E1 link=#5000A0>\n"
-                                "<img src='C:/Users/chihe/Desktop/produits.jpg' width='550' height='200'>\n"
+                                "<img src='C:/Users/chihe/Desktop/produits.jpg' width='500' height='200'>\n"
                                 "<h1>Liste des Produits</h1>"
 
 

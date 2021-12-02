@@ -46,7 +46,7 @@
      <bool>false</bool>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -691,17 +691,30 @@
         <rect>
          <x>380</x>
          <y>10</y>
-         <width>75</width>
+         <width>91</width>
          <height>23</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>10</pointsize>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>true</underline>
         </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
        </property>
        <property name="text">
         <string>Send Email</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../email.png</normaloff>../email.png</iconset>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>

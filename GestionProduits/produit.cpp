@@ -95,11 +95,13 @@ QSqlQueryModel* Produit::afficherProduits()
 }
 
 
-QSqlQueryModel *Produit::rechercherProduits(int Code_Barre , QString Nom)
+QSqlQueryModel *Produit::rechercherProduits(int Code_Barre , QString Nom )
 {
     QString res= QString::number(Code_Barre);
+
+
 QSqlQueryModel * model= new QSqlQueryModel();
-model->setQuery("select * from produit where (Code_Barre LIKE '"+res+"%'or Nom LIKE '"+Nom+"%' ) ");
+model->setQuery("select * from produit where (Code_Barre LIKE '"+res+"%'or Nom LIKE '"+Nom+"%') ");
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("Code à barre "));
 model->setHeaderData(2, Qt::Horizontal, QObject::tr("Nom"));
 model->setHeaderData(3, Qt::Horizontal, QObject::tr("Stockage"));
@@ -114,7 +116,7 @@ model->setHeaderData(6, Qt::Horizontal, QObject::tr("Fournisseurs"));
 
 bool Produit::supprimerProduits(int Code_Barre)
 {
-CBExist(Code_Barre);
+//CBExist(Code_Barre);
 QSqlQuery query;
 QString res= QString::number(Code_Barre);
 query.prepare("Delete from produit where Code_Barre = :Code_Barre ");
@@ -124,6 +126,7 @@ return    query.exec();
 
 bool Produit::modifierProduits(int Code_Barre)
 {
+
     QSqlQuery query;
     QString res= QString::number(Code_Barre);
     QString res1= QString::number(Stockage);
@@ -263,11 +266,11 @@ QSqlQueryModel* Produit::triParId()
 
     return model;
 }
-void Produit::CBExist(int Code_Barre)
+void Produit::CBExist(int CB)
 {
     QSqlQuery query ;
     query.prepare("SELECT * from produit where Code_Barre = :Code_Barre");
-    query.bindValue(":Code_Barre", Code_Barre);
+    query.bindValue(":Code_Barre", CB);
     query.exec();
 
     int i = 0 ;

@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "produit.h"
+#include "arduino.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class AjouterProduits; }
 QT_END_NAMESPACE
@@ -44,5 +46,7 @@ private slots:
 private:
     Ui::AjouterProduits *ui;
     Produit Prod;
+    Arduino A;
+
 };
 #endif // AJOUTERPRODUITS_H
