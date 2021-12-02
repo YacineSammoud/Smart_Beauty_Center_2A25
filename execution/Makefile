@@ -225,6 +225,7 @@ Makefile: ../Atelier_Connexion.pro C:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Multimedia.prl \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Gui.prl \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Sql.prl \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5SerialPort.prl \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Network.prl \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ..\Atelier_Connexion.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -392,6 +393,7 @@ C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Widgets.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Multimedia.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Gui.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Sql.prl:
+C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5SerialPort.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Network.prl:
 C:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/Qt5Core.prl:
 qmake: FORCE
