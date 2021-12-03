@@ -14,7 +14,7 @@
    <string>Gestion des Clients</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="menu">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -26,10 +26,112 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>801</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="client">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>130</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gestion Clients </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="employes">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>180</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gestion Employes </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="produit">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>230</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gestion Produits</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="fournisseurs">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>280</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gestion Fournisseurs </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rendez_vous">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>330</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gestion Rendez-vous </string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
       <string>Page</string>
      </attribute>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>6</x>
+        <y>3</y>
+        <width>801</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png</pixmap>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -179,8 +281,8 @@
      <widget class="QPushButton" name="pushButton_chercherE">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>420</y>
+        <x>150</x>
+        <y>230</y>
         <width>201</width>
         <height>28</height>
        </rect>
@@ -342,21 +444,21 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>120</x>
+        <x>130</x>
         <y>120</y>
         <width>47</width>
         <height>14</height>
        </rect>
       </property>
       <property name="text">
-       <string>trier </string>
+       <string>trier :</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>260</y>
+        <x>30</x>
+        <y>230</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -365,9 +467,9 @@
      <widget class="QPushButton" name="pushButton_pdf">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>350</x>
         <y>340</y>
-        <width>75</width>
+        <width>101</width>
         <height>23</height>
        </rect>
       </property>
@@ -408,23 +510,65 @@
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>-4</x>
+        <y>3</y>
+        <width>811</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png</pixmap>
+      </property>
+     </widget>
     </widget>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>30</y>
-      <width>811</width>
-      <height>451</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Desktop/back 2.png</pixmap>
-    </property>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>6</x>
+        <y>3</y>
+        <width>801</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>6</x>
+        <y>3</y>
+        <width>801</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png</pixmap>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

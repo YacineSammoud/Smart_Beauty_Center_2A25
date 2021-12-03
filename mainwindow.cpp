@@ -287,3 +287,8 @@ void MainWindow::on_lineEdit_textEdited(const QString &arg1)
 {
     ui->tab_employes->setModel(E.recherche7(arg1));
 }
+
+/*void MainWindow::on_employes_clicked()
+{
+    ui->
+}*/
