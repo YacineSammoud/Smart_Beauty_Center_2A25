@@ -36,7 +36,7 @@ bool Rendezvous::ajouter()
     QString res= QString::number(id);
     query.bindValue(":id",res);
     query.bindValue(":service",service);
-    query.bindValue(":date",dates);
+    query.bindValue(":dates",dates);
     query.bindValue(":heure_d",heure_d);
 
     return query.exec();
@@ -125,8 +125,8 @@ bool Rendezvous::supprimer(int id)
      QSqlQueryModel *model = new QSqlQueryModel();
          model->setQuery("SELECT * from Rendezvous ORDER BY id");
          model->setHeaderData(0,Qt::Horizontal,"id");
-         model->setHeaderData(1,Qt::Horizontal,"service");
-         model->setHeaderData(2,Qt::Horizontal,"dates");
+         model->setHeaderData(1,Qt::Horizontal,"dates");
+         model->setHeaderData(2,Qt::Horizontal,"service");
          model->setHeaderData(3,Qt::Horizontal,"heure_d");
 
          return model ;
@@ -146,8 +146,8 @@ bool Rendezvous::supprimer(int id)
      QSqlQueryModel *model = new QSqlQueryModel();
          model->setQuery("SELECT * from Rendezvous ORDER BY heure_d");
          model->setHeaderData(0,Qt::Horizontal,"id");
-         model->setHeaderData(1,Qt::Horizontal,"service");
-         model->setHeaderData(2,Qt::Horizontal,"dates");
+         model->setHeaderData(1,Qt::Horizontal,"dates");
+         model->setHeaderData(2,Qt::Horizontal,"service");
          model->setHeaderData(3,Qt::Horizontal,"heure_d");
 
          return model ;

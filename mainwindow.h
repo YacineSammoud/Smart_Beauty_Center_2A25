@@ -40,6 +40,8 @@ private slots:
 
     void on_pb_enr_clicked();
 
+    void on_lineEdit_recherche_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     Rendezvous R ;

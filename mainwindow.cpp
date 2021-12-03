@@ -291,3 +291,9 @@ void MainWindow::on_pb_enr_clicked()
     }
 
 
+
+void MainWindow::on_lineEdit_recherche_textChanged(const QString &arg1)
+{
+    QString rech=ui->lineEdit_recherche->text();
+      ui->tab_rendez_vous->setModel(R.Recherche(rech));
+}
