@@ -31,7 +31,16 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QTabWidget *tabWidget;
+    QTabWidget *menu;
+    QWidget *tab_6;
+    QLabel *label_14;
+    QPushButton *client;
+    QPushButton *employes;
+    QPushButton *produit;
+    QPushButton *fournisseurs;
+    QPushButton *rendez_vous;
+    QWidget *tab_3;
+    QLabel *label_4;
     QWidget *tab;
     QPushButton *pt_ajouter;
     QLineEdit *nbr_heure;
@@ -62,6 +71,11 @@ public:
     QLineEdit *lineEdit;
     QPushButton *pushButton_pdf;
     QWidget *tab_2;
+    QLabel *label_5;
+    QWidget *tab_4;
+    QLabel *label_6;
+    QWidget *tab_5;
+    QLabel *label_12;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -73,9 +87,38 @@ public:
         MainWindow->resize(1027, 620);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        tabWidget = new QTabWidget(centralWidget);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 811, 481));
+        menu = new QTabWidget(centralWidget);
+        menu->setObjectName(QStringLiteral("menu"));
+        menu->setGeometry(QRect(10, 30, 811, 481));
+        tab_6 = new QWidget();
+        tab_6->setObjectName(QStringLiteral("tab_6"));
+        label_14 = new QLabel(tab_6);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(6, 3, 801, 451));
+        label_14->setPixmap(QPixmap(QString::fromUtf8("../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png")));
+        client = new QPushButton(tab_6);
+        client->setObjectName(QStringLiteral("client"));
+        client->setGeometry(QRect(150, 130, 141, 31));
+        employes = new QPushButton(tab_6);
+        employes->setObjectName(QStringLiteral("employes"));
+        employes->setGeometry(QRect(150, 180, 141, 31));
+        produit = new QPushButton(tab_6);
+        produit->setObjectName(QStringLiteral("produit"));
+        produit->setGeometry(QRect(150, 230, 141, 31));
+        fournisseurs = new QPushButton(tab_6);
+        fournisseurs->setObjectName(QStringLiteral("fournisseurs"));
+        fournisseurs->setGeometry(QRect(150, 280, 141, 31));
+        rendez_vous = new QPushButton(tab_6);
+        rendez_vous->setObjectName(QStringLiteral("rendez_vous"));
+        rendez_vous->setGeometry(QRect(150, 330, 141, 31));
+        menu->addTab(tab_6, QString());
+        tab_3 = new QWidget();
+        tab_3->setObjectName(QStringLiteral("tab_3"));
+        label_4 = new QLabel(tab_3);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(6, 3, 801, 451));
+        label_4->setPixmap(QPixmap(QString::fromUtf8("../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png")));
+        menu->addTab(tab_3, QString());
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         pt_ajouter = new QPushButton(tab);
@@ -116,7 +159,7 @@ public:
         label_8->setGeometry(QRect(390, 60, 89, 16));
         pushButton_chercherE = new QPushButton(tab);
         pushButton_chercherE->setObjectName(QStringLiteral("pushButton_chercherE"));
-        pushButton_chercherE->setGeometry(QRect(600, 420, 201, 28));
+        pushButton_chercherE->setGeometry(QRect(150, 230, 201, 28));
         tab_employes = new QTableView(tab);
         tab_employes->setObjectName(QStringLiteral("tab_employes"));
         tab_employes->setGeometry(QRect(10, 260, 341, 192));
@@ -156,14 +199,14 @@ public:
         pushButton_cam->setGeometry(QRect(350, 310, 101, 23));
         label_3 = new QLabel(tab);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(120, 120, 47, 14));
+        label_3->setGeometry(QRect(130, 120, 47, 14));
         lineEdit = new QLineEdit(tab);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(600, 260, 113, 20));
+        lineEdit->setGeometry(QRect(30, 230, 113, 20));
         pushButton_pdf = new QPushButton(tab);
         pushButton_pdf->setObjectName(QStringLiteral("pushButton_pdf"));
-        pushButton_pdf->setGeometry(QRect(360, 340, 75, 23));
-        tabWidget->addTab(tab, QString());
+        pushButton_pdf->setGeometry(QRect(350, 340, 101, 23));
+        menu->addTab(tab, QString());
         label_2->raise();
         pt_ajouter->raise();
         nbr_heure->raise();
@@ -194,7 +237,25 @@ public:
         pushButton_pdf->raise();
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
-        tabWidget->addTab(tab_2, QString());
+        label_5 = new QLabel(tab_2);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(-4, 3, 811, 451));
+        label_5->setPixmap(QPixmap(QString::fromUtf8("../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png")));
+        menu->addTab(tab_2, QString());
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QStringLiteral("tab_4"));
+        label_6 = new QLabel(tab_4);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(6, 3, 801, 451));
+        label_6->setPixmap(QPixmap(QString::fromUtf8("../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png")));
+        menu->addTab(tab_4, QString());
+        tab_5 = new QWidget();
+        tab_5->setObjectName(QStringLiteral("tab_5"));
+        label_12 = new QLabel(tab_5);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setGeometry(QRect(6, 3, 801, 451));
+        label_12->setPixmap(QPixmap(QString::fromUtf8("../../Downloads/248085488_591901992026832_2710901618884620913_n (1).png")));
+        menu->addTab(tab_5, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -209,7 +270,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        menu->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -218,6 +279,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Gestion des Clients", Q_NULLPTR));
+        label_14->setText(QString());
+        client->setText(QApplication::translate("MainWindow", "Gestion Clients ", Q_NULLPTR));
+        employes->setText(QApplication::translate("MainWindow", "Gestion Employes ", Q_NULLPTR));
+        produit->setText(QApplication::translate("MainWindow", "Gestion Produits", Q_NULLPTR));
+        fournisseurs->setText(QApplication::translate("MainWindow", "Gestion Fournisseurs ", Q_NULLPTR));
+        rendez_vous->setText(QApplication::translate("MainWindow", "Gestion Rendez-vous ", Q_NULLPTR));
+        menu->setTabText(menu->indexOf(tab_6), QApplication::translate("MainWindow", "Page", Q_NULLPTR));
+        label_4->setText(QString());
+        menu->setTabText(menu->indexOf(tab_3), QApplication::translate("MainWindow", "Page", Q_NULLPTR));
         pt_ajouter->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
         bouton_modifier->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         label_9->setText(QApplication::translate("MainWindow", "prenom", Q_NULLPTR));
@@ -235,10 +305,15 @@ public:
         pushButton_id->setText(QApplication::translate("MainWindow", "id", Q_NULLPTR));
         pushButton_prenom->setText(QApplication::translate("MainWindow", "prenom", Q_NULLPTR));
         pushButton_cam->setText(QApplication::translate("MainWindow", "camera", Q_NULLPTR));
-        label_3->setText(QApplication::translate("MainWindow", "trier ", Q_NULLPTR));
+        label_3->setText(QApplication::translate("MainWindow", "trier :", Q_NULLPTR));
         pushButton_pdf->setText(QApplication::translate("MainWindow", "pdf ", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Tab 1", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Tab 2", Q_NULLPTR));
+        menu->setTabText(menu->indexOf(tab), QApplication::translate("MainWindow", "Tab 1", Q_NULLPTR));
+        label_5->setText(QString());
+        menu->setTabText(menu->indexOf(tab_2), QApplication::translate("MainWindow", "Tab 2", Q_NULLPTR));
+        label_6->setText(QString());
+        menu->setTabText(menu->indexOf(tab_4), QApplication::translate("MainWindow", "Page", Q_NULLPTR));
+        label_12->setText(QString());
+        menu->setTabText(menu->indexOf(tab_5), QApplication::translate("MainWindow", "Page", Q_NULLPTR));
     } // retranslateUi
 
 };

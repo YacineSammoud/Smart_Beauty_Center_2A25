@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 #include "employes.h"
 #include "widget.h"
-
+#include "arduino.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -54,10 +54,15 @@ private slots:
 
     void on_lineEdit_textEdited(const QString &arg1);
 
+    void on_employes_clicked();
+void update_label();
 private:
     Ui::MainWindow *ui;
     Widget *dialog;
     employes E ;
+    QByteArray data; // variable contenant les données reçues
+
+    Arduino A; // objet temporaire
 };
 
 #endif // MAINWINDOW_H

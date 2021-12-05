@@ -154,5 +154,17 @@ return  model ;
     model->setHeaderData(4, Qt::Horizontal,QObject::tr("nbr_heure"));
     model->setHeaderData(5, Qt::Horizontal,QObject::tr("nbr_point"));
 
+
         return model;
     }
+    /*int  * CLIENTS::nbRDV(int  a)
+    {
+        QSqlQueryModel *model=new QSqlQueryModel();
+        model->setQuery("SELECT * FROM rendez   WHERE (id LIKE '%"+a+"%' ) ");
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+
+    return model->rowCount();
+
+
+    }
+*/
