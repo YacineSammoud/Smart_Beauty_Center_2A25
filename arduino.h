@@ -29,4 +29,3 @@ QByteArray data;  // contenant les données lues à partir d'Arduino
 
 
 #endif // ARDUINO_H
-

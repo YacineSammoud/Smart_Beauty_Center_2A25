@@ -2,19 +2,14 @@
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
-#include"employes.h"
-#include<QIntValidator>
-#include <QApplication>
-
-
+#include "login.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-      a.setStyle("fusion") ;
+    //MainWindow w;
+    Login w;
     Connection c;
     bool test=c.createconnect();
-
     if(test)
     {w.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),
@@ -26,6 +21,8 @@ int main(int argc, char *argv[])
         QMessageBox::critical(nullptr, QObject::tr("database is not open"),
                     QObject::tr("connection failed.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
+
+
 
     return a.exec();
 }

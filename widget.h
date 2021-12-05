@@ -27,7 +27,7 @@ public:
     ~Widget();
 
 private slots:
-    void on_option_pushButton_clicked();
+    //void on_option_pushButton_clicked();
 
 private:
     Ui::Widget *ui;
@@ -39,9 +39,6 @@ private:
     QAction *mAllumerAction ;
     QAction *mEteindreAction ;
     QAction *mCaturerAction ;
-
-
-
 
 
 };

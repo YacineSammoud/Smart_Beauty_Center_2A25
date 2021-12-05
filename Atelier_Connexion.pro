@@ -4,10 +4,14 @@
 #
 #-------------------------------------------------
 
+
+QT += core gui charts
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 QT       += core gui sql
 QT       += core gui  serialport
 QT +=charts
 QT       += core gui multimedia multimediawidgets
+QT += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Atelier_Connexion
@@ -28,21 +32,44 @@ CONFIG += c++11
 
 SOURCES += \
     arduino.cpp \
+    client.cpp \
     employes.cpp \
+    exportexcelobjet.cpp \
+    fournisseur.cpp \
+    historique.cpp \
+    login.cpp \
+    mail.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
+    produit.cpp \
+    rendezvous.cpp \
+    smtp.cpp \
+    statj.cpp \
     widget.cpp
 
 HEADERS += \
     arduino.h \
+    client.h \
     employes.h \
+    exportexcelobjet.h \
+    fournisseur.h \
+    historique.h \
+    login.h \
+    mail.h \
         mainwindow.h \
     connection.h \
+    produit.h \
+    rendezvous.h \
+    smtp.h \
+    statj.h \
     widget.h
 
 FORMS += \
+        login.ui \
+        mail.ui \
         mainwindow.ui \
+        statj.ui \
         widget.ui
 
 # Default rules for deployment.

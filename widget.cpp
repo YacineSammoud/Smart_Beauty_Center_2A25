@@ -11,6 +11,9 @@
 #include <QMenu>
 #include<QAction>
 #include<QFileDialog>
+#include "ui_mainwindow.h"
+#include "mainwindow.h"
+#include<QSqlQueryModel>
 
 
 Widget::Widget(QWidget *parent)
@@ -73,7 +76,3 @@ Widget::~Widget()
 {
     delete ui;
 }
-
-
-
-
