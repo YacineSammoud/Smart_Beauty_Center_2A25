@@ -1,0 +1,40 @@
+
+ID_F:hedi
+nom :amine
+QP:56
+ID_F:hela
+nom :269
+QP:897
+ID_F:asma
+nom :mabrouk
+QP:
+ID_F:yacine
+nom :samouda
+QP:10
+ID_F:alela
+nom :okkk
+QP:87
+ID_F:chiheb
+nom :labidi
+QP:89
+ID_F:4070
+nom :sleh be
+QP:1
+ID_F:15018905
+nom :omar
+QP:12
+ID_F:15018905
+nom :omar
+QP:12
+ID_F:15018905
+nom :omar
+QP:12
+ID_F:258
+nom :omar
+QP:59
+ID_F:14098
+nom :
+QP:
+ID_F:123
+nom :chiheb
+QP:5
